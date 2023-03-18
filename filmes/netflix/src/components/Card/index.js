@@ -3,23 +3,23 @@ import './Card.css';
 
 const listFilmes = [
     {
-        "nome": "Jurassic Park",
+        "nome": "TopGun:Maverick ",
         "duracao": "126 min",
-        "foto":"./assets/images/",
+        "foto":"./Top_Gun_Maverick.jpg",
         "ano": "1993",
         "genero":"Aventura",
     },
     {
-        "nome": "Jurassic Park 2",
+        "nome": "TopGun:Maverick",
         "duracao": "126 min",
-        "foto":"jurassicpark.png",
+        "foto":"./Top_Gun_Maverick.jpg",
         "ano": "1997",
         "genero":"Aventura",
     },
     {
-        "nome": "Jurassic Park 3",
+        "nome": "TopGun:Maverick",
         "duracao": "126 min",
-        "foto":"jurassicpark.png",
+        "foto":"./Top_Gun_Maverick.jpg",
         "ano": "2001",
         "genero":"Aventura",
     }
@@ -35,15 +35,16 @@ function Card() {
             <div className="col">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">{filme.nome}</h5>
                     <p class="card-text">
-                        {filme.nome}
+                    <img src={'/assets/images/' + filme.foto}></img>
+                        
                     </p>
                     <p class="card-text">
                         {filme.ano}
                     </p>
                     <button>
-                        <a href="https://www.youtube.com/watch?v=QWBKEmWWL38" class="btn btn-primary">Trailer</a>
+                        <a href={`/detalhes/${filme.nome}`}class="btn btn-primary">Detalhes</a>
                     </button>
                 </div>
             </div>

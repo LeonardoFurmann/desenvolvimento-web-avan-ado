@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
+import Titulo from './components/Titulo/index';
+//import Menu from './components/Menu/index';
+import Footer from './components/Footer/index';
 import Card from './components/Card/index';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <Menu /> */}
+    <App />
+    <Titulo />
     <Card />
+    <Footer />
   </React.StrictMode>
 );
 

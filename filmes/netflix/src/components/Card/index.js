@@ -1,9 +1,9 @@
 
 import './Card.css';
 
-const listFilmes = [
+const filmes = [
     {
-        "nome": "TopGun:Maverick ",
+        "nome": "TopGun ",
         "duracao": "126 min",
         "foto":"./Top_Gun_Maverick.jpg",
         "ano": "1993",
@@ -16,45 +16,35 @@ const listFilmes = [
         "ano": "1997",
         "genero":"Aventura",
     },
-    {
-        "nome": "TopGun:Maverick",
-        "duracao": "126 min",
-        "foto":"./Top_Gun_Maverick.jpg",
-        "ano": "2001",
-        "genero":"Aventura",
-    }
 ]
 
 
 function Card() {
   return (
-    <div className="Card">
-    <div className="container">
-        <div className="row">
-            {listFilmes.map((filme) =>
-            <div className="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{filme.nome}</h5>
-                    <p class="card-text">
-                    <img src={'/assets/images/' + filme.foto}></img>
-                        
-                    </p>
-                    <p class="card-text">
-                        {filme.ano}
-                    </p>
-                    <button>
-                        <a href={`/detalhes/${filme.nome}`}class="btn btn-primary">Detalhes</a>
-                    </button>
-                </div>
+    <div className="container text-center">
+      <div class="row">
+        {filmes.map((filme, i) => (
+          <div className="col" key={i}>
+            <div className="card">
+              <img src={'/assets/images/' + filme.foto} alt={filme.nome} className="card-img-top" />
+              <div className="card-body">
+                <h5 className="card-title">{filme.nome} ({filme.ano}) </h5>
+                <p>Sinopse</p>
+                <p className="card-text">{filme.descricao}</p>
+                <p>{filme.duracao}</p>
+                <p>{filme.genero}</p>
+                <a
+                  href={`/detalhes/${filme.nome}`}
+                >
+                  <div className="btn btn-primary"> Detalhes</div>
+                </a>
+              </div>
             </div>
-        </div> 
-            )  
-            }
-        </div>     
+          </div>
+        ))}
+      </div>
     </div>
-    </div>
-  );
+  )
 }
 
 export default Card;

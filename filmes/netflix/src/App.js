@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Pages/home'
 import Planos from './Pages/planos';
 import Sobre from './Pages/sobre';
-//import Detalhes from './Pages/detalhes';
+import Detalhes from './Pages/detalhes';
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
             <Route path='/' element={<Home/>}></Route>
             <Route path='/planos' element={<Planos/>}></Route>
             <Route path='/sobre/:name' element={<Sobre/>}></Route>
-            {/* <Route path='/detalhes/:filmenome' element={<Detalhes/>}></Route> */}
+            <Route path='/detalhes/:filme' element={<Detalhes/>}></Route>
             <Route path='*' element={<h1>Página não encontrada</h1>} />
           </Routes>
           </header>

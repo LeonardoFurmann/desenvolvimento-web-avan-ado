@@ -24,6 +24,7 @@ const filmes = [
 function Detalhes() {
 const { filme } = useParams();
 
+<Footer />
 return(
     <div>
     <p>Filme: {filme}</p>

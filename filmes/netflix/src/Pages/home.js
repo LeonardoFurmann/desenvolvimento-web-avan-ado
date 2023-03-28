@@ -1,13 +1,15 @@
 const filmes = [
-    {
-        "nome": "TopGun ",
+    {   
+        "id": 1 ,
+        "nome": "Top Gun ",
         "duracao": "126 min",
         "foto": "./topgun.jpg",
         "ano": "1986",
         "genero": "Aventura",
     },
-    {
-        "nome": "TopGun",
+    {   
+        "id": 2 ,
+        "nome": "Top Gun: Maverick",
         "duracao": "126 min",
         "foto": "./Top_Gun_Maverick.jpg",
         "ano": "2022",
@@ -36,7 +38,7 @@ export default function Home() {
                                 <p className="card-text">{filme.descricao}</p>
                                 <p>{filme.duracao}</p>
                                 <p>{filme.genero}</p>
-                                <a href={`/detalhes/${filme.nome}`}>
+                                <a href={`/detalhes/${filme.id}`}>
                                     <div className="btn btn-primary"> Detalhes</div>
                                 </a>
                             </div>

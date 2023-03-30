@@ -34,7 +34,6 @@ export default function Home() {
                             <img src={'/assets/images/' + filme.foto} alt={filme.nome} className="card-img-top" />
                             <div className="card-body">
                                 <h5 className="card-title">{filme.nome} ({filme.ano}) </h5>
-                                <p>Sinopse</p>
                                 <p className="card-text">{filme.descricao}</p>
                                 <p>{filme.duracao}</p>
                                 <p>{filme.genero}</p>

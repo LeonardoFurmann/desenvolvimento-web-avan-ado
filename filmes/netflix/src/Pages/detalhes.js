@@ -39,12 +39,12 @@ function Detalhes() {
                                     <img src={'/assets/images/' + filmes[0].foto} alt={filmes[0].nome} className="card-img-top" />
                                 </div>
                             </div><div className="col" key={2}>
-                                    <div className="card">
+                                    <div className="card mx-auto p-3">
 
                                         <h1 className='text-center'>{filmes[0].nome}</h1>
                                         <p className='text-center'>{filmes[0].duracao}</p>
                                         <p className='text-center'>{filmes[0].genero}</p>
-                                        <p>{filmes[0].sinopse}</p>
+                                        <p className='text-center'>{filmes[0].sinopse}</p>
 
 
                                     </div>
@@ -67,12 +67,12 @@ function Detalhes() {
                                 <img src={'/assets/images/' + filmes[1].foto} alt={filmes[0].nome } className="card-img-top"/>
                             </div>
                         </div><div className="col" key={2}>
-                                <div className="card">
+                                <div className="card mx-auto p-3">
 
                                     <h1 className='text-center'>{filmes[1].nome}</h1>
                                     <p className='text-center'>{filmes[1].duracao}</p>
                                     <p className='text-center'>{filmes[1].genero}</p>
-                                    <p >{filmes[0].sinopse}</p>
+                                    <p className='text-center'>{filmes[0].sinopse}</p>
 
                                    
                                 </div>

@@ -15,6 +15,14 @@ const filmes = [
         "ano": "2022",
         "genero": "Aventura",
     },
+    {   
+        "id": 3 ,
+        "nome": "John Wick",
+        "duracao": "126 min",
+        "foto": "./John_wick.jpg",
+        "ano": "2014",
+        "genero": "Ação",
+    },
 ]
 
 export default function Home() {

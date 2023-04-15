@@ -4,6 +4,7 @@ import Home from './Pages/home'
 import Planos from './Pages/planos';
 import Sobre from './Pages/sobre';
 import Detalhes from './Pages/detalhes';
+import Cadastro from './Pages/cadastro';
 
 export default function App() {
   return (
@@ -15,7 +16,8 @@ export default function App() {
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li> <Link to='/' class="nav-link px-2 link-secondary">Home</Link> </li>
             <li> <Link to='/planos' class="nav-link px-2 link-dark">Planos</Link></li>
-            <li> <Link to='/sobre/Leo' class="nav-link px-2 link-dark">Sobre</Link></li>
+            <li> <Link to='/sobre/leo' class="nav-link px-2 link-dark">Sobre</Link></li>
+            <li> <Link to='/cadastro' class="nav-link px-2 link-dark">Cadastro</Link></li>
           </ul>
         </header>
 
@@ -23,6 +25,7 @@ export default function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/planos' element={<Planos />}></Route>
           <Route path='/sobre/:name' element={<Sobre />}></Route>
+          <Route path='/cadastro' element={<Cadastro />}></Route>
           <Route path='/detalhes/:filme' element={<Detalhes />}></Route>
           <Route path='*' element={<h1>Página não encontrada</h1>} />
         </Routes>
